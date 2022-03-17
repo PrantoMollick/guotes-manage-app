@@ -25,7 +25,7 @@ const MainNavigation = () => {
                 isActive ? `${classes.active}` : ''
               }
             >
-              All Quotes
+              Add a Quote
             </NavLink>
           </li>
         </ul>
