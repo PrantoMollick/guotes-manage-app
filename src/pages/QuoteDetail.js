@@ -1,6 +1,8 @@
 import { Fragment } from 'react';
-import { Link, Outlet, useParams, useLocation} from 'react-router-dom';
+import { Link, Outlet, useParams, useLocation } from 'react-router-dom';
 import HighlightedQuote from '../components/quotes/HighlightedQuote';
+import useHttp from '../hooks/use-http';
+import { getSingleQuote } from '../lib/api';
 
 const DUMMY_QUOTES = [
   { id: 'q1', author: 'Pranto', text: 'Learn React router with fun' },
@@ -10,6 +12,7 @@ const DUMMY_QUOTES = [
 const QuoteDetail = () => {
   const params = useParams();
   const location = useLocation();
+  const {sendRequest, status, data: loadedQuote, error} = useHttp(getSingleQuote);
   console.log(location);
 
   const quote = DUMMY_QUOTES.find((quote) => quote.id === params.quoteId);
