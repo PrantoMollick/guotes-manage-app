@@ -1,5 +1,5 @@
 import { Fragment } from 'react';
-import { Link, Outlet, useParams, useLocation } from 'react-router-dom';
+import { Link, Outlet, useParams, useLocation} from 'react-router-dom';
 import HighlightedQuote from '../components/quotes/HighlightedQuote';
 
 const DUMMY_QUOTES = [
