@@ -12,7 +12,7 @@ const NewQuote = () => {
       return;
     }
     navigate('/quotes')
-  }, [isAddQuote])
+  }, [isAddQuote, navigate])
 
   const addQuoteHandler = (quoteData) => {
       console.log(quoteData);
